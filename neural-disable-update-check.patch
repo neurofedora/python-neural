@@ -1,0 +1,26 @@
+diff --git a/neural/__init__.py b/neural/__init__.py
+index 9bafbd4..e739105 100644
+--- a/neural/__init__.py
++++ b/neural/__init__.py
+@@ -33,19 +33,7 @@ import general
+ import notification
+ import freesurfer
+ 
+-# Check for update
+-import xmlrpclib
+-try:
+-    pypi = xmlrpclib.ServerProxy('http://pypi.python.org/pypi')
+-    latest = pypi.package_releases('neural-fmri')
+-    if latest:
+-        if latest[0]!=version:
+-            notify('## Update to neural available on PyPI (current version: %s; latest version: %s)' % (version,latest[0]),level=level.debug)
+-except:
+-    pass
+-    
+-
+ # user customization
+ import personality
+ personality.display('greeting')
+-personality.set_goodbye()
+\ No newline at end of file
++personality.set_goodbye()
